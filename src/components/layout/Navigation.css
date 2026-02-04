@@ -1,0 +1,175 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--color-cream);
+  transition: box-shadow var(--transition-base), 
+              background-color var(--transition-base);
+}
+
+.nav--scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.nav__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.nav__logo {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-black);
+  color: var(--color-terracotta);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.nav__logo:hover {
+  color: var(--color-ochre);
+}
+
+/* Desktop Navigation */
+.nav__desktop {
+  display: none;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .nav__desktop {
+    display: flex;
+  }
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--color-charcoal);
+  cursor: pointer;
+  padding: var(--space-2) 0;
+  transition: color var(--transition-base);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-terracotta);
+  transition: width var(--transition-base);
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: var(--color-terracotta);
+}
+
+.nav__link--active::after {
+  width: 100%;
+}
+
+/* Mobile Controls */
+.nav__mobile-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .nav__mobile-controls {
+    display: none;
+  }
+}
+
+.nav__toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__toggle-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-charcoal);
+  transition: all var(--transition-base);
+}
+
+.nav__toggle-line--open:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.nav__toggle-line--open:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle-line--open:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu */
+.nav__mobile {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--color-cream);
+  box-shadow: var(--shadow-xl);
+  padding: var(--space-8) var(--space-6);
+  overflow-y: auto;
+}
+
+.nav__mobile-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__mobile-links li {
+  margin-bottom: var(--space-4);
+}
+
+.nav__mobile-link {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  color: var(--color-charcoal);
+  text-align: left;
+  padding: var(--space-3) 0;
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.nav__mobile-link:hover,
+.nav__mobile-link--active {
+  color: var(--color-terracotta);
+}
+
+/* Made with Bob */

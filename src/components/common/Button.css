@@ -1,0 +1,91 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.button--small {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.button--medium {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-base);
+}
+
+.button--large {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-lg);
+}
+
+/* Variants */
+.button--primary {
+  background: var(--gradient-warm);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.button--primary:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.button--secondary {
+  background: transparent;
+  color: var(--color-charcoal);
+  border: var(--border-width-thick) solid var(--color-charcoal);
+}
+
+.button--secondary:hover {
+  background: var(--color-charcoal);
+  color: var(--color-cream);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--color-charcoal);
+}
+
+.button--ghost:hover {
+  background: var(--color-sand);
+}
+
+/* Ripple effect */
+.button__ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.button:hover .button__ripple {
+  width: 300px;
+  height: 300px;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Made with Bob */

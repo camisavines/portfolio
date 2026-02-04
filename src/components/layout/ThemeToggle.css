@@ -1,0 +1,36 @@
+.theme-toggle {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-base);
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-sand);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 2px;
+}
+
+.theme-toggle__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-charcoal);
+}
+
+.theme-toggle__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Made with Bob */

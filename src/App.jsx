@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Navigation } from './components/layout/Navigation';
+import { Hero } from './components/sections/Hero';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navigation />
+      <main id="main">
+        <Hero />
+        
+        {/* Placeholder sections - will be implemented next */}
+        <section id="about" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--color-cream)' }}>
+          <div className="container">
+            <h2 className="heading-2" style={{ textAlign: 'center' }}>About Section</h2>
+            <p style={{ textAlign: 'center', color: 'var(--color-slate)' }}>Coming soon...</p>
+          </div>
+        </section>
+
+        <section id="skills" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--color-sand)' }}>
+          <div className="container">
+            <h2 className="heading-2" style={{ textAlign: 'center' }}>Skills Section</h2>
+            <p style={{ textAlign: 'center', color: 'var(--color-slate)' }}>Coming soon...</p>
+          </div>
+        </section>
+
+        <section id="projects" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--color-cream)' }}>
+          <div className="container">
+            <h2 className="heading-2" style={{ textAlign: 'center' }}>Projects Section</h2>
+            <p style={{ textAlign: 'center', color: 'var(--color-slate)' }}>Coming soon...</p>
+          </div>
+        </section>
+
+        <section id="contact" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--color-sand)' }}>
+          <div className="container">
+            <h2 className="heading-2" style={{ textAlign: 'center' }}>Contact Section</h2>
+            <p style={{ textAlign: 'center', color: 'var(--color-slate)' }}>Coming soon...</p>
+          </div>
+        </section>
+      </main>
+
+      <footer style={{ padding: 'var(--space-8) 0', textAlign: 'center', background: 'var(--color-charcoal)', color: 'var(--color-mist)' }}>
+        <div className="container">
+          <p className="body-small">© 2026 Cami Savines. Built with ❤️, ☕, and React.</p>
+        </div>
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
+// Made with Bob

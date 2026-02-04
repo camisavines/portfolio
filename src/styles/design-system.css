@@ -1,0 +1,344 @@
+/* ===== DESIGN SYSTEM ===== */
+/* Portfolio Website - Light & Dark Mode */
+
+:root {
+  /* ===== COLOR PALETTE - LIGHT MODE ===== */
+  
+  /* Primary Colors - Warm Earthy Base */
+  --color-cream: #FAF8F3;
+  --color-sand: #E8E3D8;
+  --color-clay: #D4C5B0;
+  
+  /* Accent Colors - Vibrant & Confident */
+  --color-terracotta: #E07A5F;
+  --color-sage: #81B29A;
+  --color-ochre: #F2A154;
+  
+  /* Neutral Colors */
+  --color-charcoal: #2D3142;
+  --color-slate: #4F5D75;
+  --color-mist: #BFC0C0;
+  
+  /* Semantic Colors */
+  --color-success: #81B29A;
+  --color-error: #E07A5F;
+  --color-warning: #F2A154;
+  
+  /* Gradients */
+  --gradient-warm: linear-gradient(135deg, #E07A5F 0%, #F2A154 100%);
+  --gradient-cool: linear-gradient(135deg, #81B29A 0%, #4F5D75 100%);
+  --gradient-sunset: linear-gradient(180deg, #FAF8F3 0%, #E8E3D8 100%);
+  
+  /* ===== TYPOGRAPHY ===== */
+  
+  /* Font Families */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  
+  /* Type Scale (1.250 - Major Third) */
+  --text-xs: 0.64rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.563rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-4xl: 3.052rem;
+  --text-5xl: 3.815rem;
+  --text-6xl: 4.768rem;
+  
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Font Weights */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 900;
+  
+  /* ===== SPACING ===== */
+  
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+  --space-10: 5rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+  --space-20: 10rem;
+  --space-24: 12rem;
+  
+  /* Section Spacing */
+  --section-padding-mobile: var(--space-12);
+  --section-padding-tablet: var(--space-16);
+  --section-padding-desktop: var(--space-20);
+  
+  /* ===== LAYOUT ===== */
+  
+  --container-max-width: 1440px;
+  --content-max-width: 1200px;
+  --narrow-max-width: 800px;
+  
+  /* ===== BORDERS & RADIUS ===== */
+  
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  --border-width: 1px;
+  --border-width-thick: 2px;
+  
+  /* ===== SHADOWS ===== */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(45, 49, 66, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(45, 49, 66, 0.1),
+               0 2px 4px -1px rgba(45, 49, 66, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(45, 49, 66, 0.1),
+               0 4px 6px -2px rgba(45, 49, 66, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(45, 49, 66, 0.1),
+               0 10px 10px -5px rgba(45, 49, 66, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(45, 49, 66, 0.25);
+  
+  /* ===== TRANSITIONS ===== */
+  
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+  --transition-slower: 500ms ease;
+  
+  /* ===== Z-INDEX ===== */
+  
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+}
+
+/* ===== DARK MODE ===== */
+
+[data-theme="dark"] {
+  /* Primary Colors - Deep, Rich Backgrounds */
+  --color-cream: #1A1D28;
+  --color-sand: #242936;
+  --color-clay: #3A3F52;
+  
+  /* Accent Colors - Slightly Desaturated but Still Vibrant */
+  --color-terracotta: #E8927A;
+  --color-sage: #90C4A8;
+  --color-ochre: #F5B76E;
+  
+  /* Neutral Colors */
+  --color-charcoal: #E8E9ED;
+  --color-slate: #B8BCCF;
+  --color-mist: #6B7280;
+  
+  /* Semantic Colors */
+  --color-success: #90C4A8;
+  --color-error: #E8927A;
+  --color-warning: #F5B76E;
+  
+  /* Gradients - Adjusted for dark backgrounds */
+  --gradient-warm: linear-gradient(135deg, #E8927A 0%, #F5B76E 100%);
+  --gradient-cool: linear-gradient(135deg, #90C4A8 0%, #6B7280 100%);
+  --gradient-sunset: linear-gradient(180deg, #1A1D28 0%, #242936 100%);
+  
+  /* Shadows - Lighter for dark mode */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4),
+               0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
+               0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4),
+               0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== BASE STYLES ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== TYPOGRAPHY CLASSES ===== */
+
+.heading-hero {
+  font-size: clamp(var(--text-4xl), 8vw, var(--text-6xl));
+  font-weight: var(--weight-black);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+}
+
+.heading-1 {
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+  font-family: var(--font-display);
+}
+
+.heading-2 {
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  font-family: var(--font-display);
+}
+
+.heading-3 {
+  font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  font-family: var(--font-display);
+}
+
+.body-large {
+  font-size: clamp(var(--text-lg), 2vw, var(--text-xl));
+  line-height: var(--leading-relaxed);
+}
+
+.body-base {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+.body-small {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+/* ===== LAYOUT UTILITIES ===== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--space-8);
+  }
+}
+
+.section {
+  padding: var(--section-padding-mobile) 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--section-padding-tablet) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--section-padding-desktop) 0;
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-terracotta);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+  z-index: var(--z-tooltip);
+  border-radius: var(--radius-md);
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* ===== FOCUS STYLES ===== */
+
+*:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ===== REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== SMOOTH TRANSITIONS FOR THEME CHANGE ===== */
+
+body,
+.container,
+.section,
+button,
+a,
+input,
+textarea {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Made with Bob */
