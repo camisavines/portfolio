@@ -1,6 +1,7 @@
 import { Navigation } from "./components/layout/Navigation";
 import { Hero } from "./components/sections/Hero";
 import { About } from "./components/sections/About";
+import { Projects } from "./components/sections/Projects";
 import "./App.css";
 
 function App() {
@@ -32,26 +33,7 @@ function App() {
           </div>
         </section>
 
-        <section
-          id="projects"
-          className="section"
-          style={{
-            minHeight: "100vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "var(--color-cream)",
-          }}
-        >
-          <div className="container">
-            <h2 className="heading-2" style={{ textAlign: "center" }}>
-              Projects Section
-            </h2>
-            <p style={{ textAlign: "center", color: "var(--color-slate)" }}>
-              Coming soon...
-            </p>
-          </div>
-        </section>
+        <Projects />
 
         <section
           id="contact"

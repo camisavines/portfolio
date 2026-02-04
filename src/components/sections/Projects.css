@@ -1,0 +1,211 @@
+.projects {
+  background-color: var(--color-sand);
+}
+
+.projects__content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/* Header */
+.projects__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.projects__subtitle {
+  color: var(--color-slate);
+  margin-top: var(--space-4);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Projects Grid */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+/* Project Card */
+.project-card {
+  background-color: var(--color-cream);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-clay);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-terracotta);
+}
+
+/* Project Image */
+.project-card__image {
+  position: relative;
+  width: 100%;
+  padding-top: 60%; /* 5:3 aspect ratio */
+  background-color: var(--color-sand);
+  overflow: hidden;
+}
+
+.project-card__image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-sand) 0%, var(--color-clay) 100%);
+}
+
+.project-card__image-icon {
+  font-size: 4rem;
+  opacity: 0.3;
+}
+
+/* Overlay with Links */
+.project-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(45, 49, 66, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.project-card:hover .project-card__overlay {
+  opacity: 1;
+}
+
+.project-card__links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.project-card__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background-color: var(--color-terracotta);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  transition: all var(--transition-base);
+}
+
+.project-card__link:hover {
+  background-color: var(--color-ochre);
+  transform: translateY(-2px);
+}
+
+.project-card__link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Project Content */
+.project-card__content {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
+}
+
+.project-card__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.project-card__description {
+  font-size: var(--text-base);
+  color: var(--color-slate);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+  flex: 1;
+}
+
+/* Technologies */
+.project-card__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.project-card__tech-tag {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background-color: var(--color-sand);
+  color: var(--color-charcoal);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-clay);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects__grid {
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects__header {
+    margin-bottom: var(--space-8);
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .project-card__content {
+    padding: var(--space-5);
+  }
+
+  .project-card__title {
+    font-size: var(--text-xl);
+  }
+
+  .project-card__links {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 var(--space-4);
+  }
+
+  .project-card__link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card__content {
+    padding: var(--space-4);
+  }
+
+  .project-card__image {
+    padding-top: 75%; /* Taller aspect ratio on mobile */
+  }
+}
+
+/* Made with Bob */
