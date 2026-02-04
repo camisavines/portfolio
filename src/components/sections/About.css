@@ -1,0 +1,282 @@
+.about {
+  background-color: var(--color-cream);
+}
+
+.about__content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/* Header */
+.about__header {
+  /* text-align: center; */
+  margin-bottom: var(--space-12);
+}
+
+.about__subtitle {
+  color: var(--color-slate);
+  margin-top: var(--space-4);
+}
+
+/* Two Column Layout */
+.about__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+/* Left Column */
+.about__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+/* Bio */
+.about__bio {
+  text-align: left;
+}
+
+.about__bio p {
+  color: var(--color-slate);
+  margin-bottom: var(--space-4);
+}
+
+.about__bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills */
+.about__skills h3 {
+  text-align: left;
+  margin-bottom: var(--space-6);
+}
+
+.about__skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.about__skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.about__skill-category {
+  font-size: var(--text-base);
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.about__skill-category strong {
+  font-weight: var(--weight-bold);
+  color: var(--color-charcoal);
+}
+
+.about__skill-items {
+  list-style: disc;
+  padding-left: var(--space-5);
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-4);
+}
+
+.about__skill-item {
+  color: var(--color-slate);
+  font-size: var(--text-base);
+  display: inline;
+}
+
+.about__skill-item::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+/* Right Column */
+.about__right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Experience Timeline */
+.about__experience h3 {
+  text-align: left;
+  margin-bottom: var(--space-6);
+}
+
+.about__timeline {
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+.about__timeline-item {
+  position: relative;
+  display: flex;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+  transition: transform var(--transition-base);
+}
+
+.about__timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.about__timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-terracotta);
+  border: 3px solid var(--color-cream);
+  box-shadow: 0 0 0 3px var(--color-terracotta);
+  z-index: 2;
+}
+
+.about__timeline-line {
+  width: 2px;
+  height: 100%;
+  background-color: var(--color-clay);
+  margin-top: var(--space-2);
+  min-height: 120px;
+}
+
+.about__timeline-content {
+  flex: 1;
+  background-color: var(--color-sand);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-clay);
+  transition: all var(--transition-base);
+}
+
+.about__timeline-item:hover .about__timeline-content {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-terracotta);
+}
+
+.about__timeline-year {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-terracotta);
+  background-color: var(--color-cream);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-3);
+}
+
+.about__timeline-role {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-1);
+}
+
+.about__timeline-company {
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-slate);
+  margin-bottom: var(--space-3);
+}
+
+.about__timeline-description {
+  font-size: var(--text-base);
+  color: var(--color-slate);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.about__timeline-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about__timeline-highlights li {
+  position: relative;
+  padding-left: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-slate);
+  margin-bottom: var(--space-2);
+}
+
+.about__timeline-highlights li:last-child {
+  margin-bottom: 0;
+}
+
+.about__timeline-highlights li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-sage);
+  font-weight: var(--weight-bold);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about__columns {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
+@media (max-width: 768px) {
+  .about__header {
+    margin-bottom: var(--space-8);
+  }
+
+  .about__columns {
+    gap: var(--space-8);
+  }
+
+  .about__left {
+    gap: var(--space-8);
+  }
+
+  .about__timeline {
+    padding-left: var(--space-6);
+  }
+
+  .about__timeline-item {
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+
+  .about__timeline-content {
+    padding: var(--space-4);
+  }
+
+  .about__timeline-role {
+    font-size: var(--text-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .about__timeline {
+    padding-left: var(--space-4);
+  }
+
+  .about__timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .about__timeline-line {
+    min-height: 100px;
+  }
+}
+
+/* Made with Bob */

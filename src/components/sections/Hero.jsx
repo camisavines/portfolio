@@ -36,7 +36,7 @@ export const Hero = () => {
             animate="visible"
             variants={textVariants}
           >
-            Hey there, I'm Cami 👋
+            Hey there, I'm Camisa 👋
           </motion.p>
 
           <motion.h1
@@ -56,7 +56,7 @@ export const Hero = () => {
             animate="visible"
             variants={textVariants}
           >
-            Front-stack engineer & digital builder helping people and small 
+            Front-stack engineer helping people and small 
             businesses create confident, modern presences with craftsmanship and care.
           </motion.p>
 

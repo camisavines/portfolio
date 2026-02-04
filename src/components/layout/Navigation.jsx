@@ -46,7 +46,7 @@ export const Navigation = () => {
             e.preventDefault();
             scrollTo('hero', 0);
           }}>
-            CS
+            CV
           </a>
 
           {/* Desktop Navigation */}
