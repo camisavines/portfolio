@@ -2,6 +2,7 @@ import { Navigation } from "./components/layout/Navigation";
 import { Hero } from "./components/sections/Hero";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
+import { Contact } from "./components/sections/Contact";
 import "./App.css";
 
 function App() {
@@ -35,26 +36,7 @@ function App() {
 
         <Projects />
 
-        <section
-          id="contact"
-          className="section"
-          style={{
-            minHeight: "100vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "var(--color-sand)",
-          }}
-        >
-          <div className="container">
-            <h2 className="heading-2" style={{ textAlign: "center" }}>
-              Contact Section
-            </h2>
-            <p style={{ textAlign: "center", color: "var(--color-slate)" }}>
-              Coming soon...
-            </p>
-          </div>
-        </section>
+        <Contact />
       </main>
 
       <footer
