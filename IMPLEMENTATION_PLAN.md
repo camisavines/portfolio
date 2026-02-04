@@ -1016,23 +1016,23 @@ jobs:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary Meta Tags -->
-  <title>Cami Savines | Front-Stack Engineer & Digital Builder</title>
-  <meta name="title" content="Cami Savines | Front-Stack Engineer & Digital Builder">
+  <title>Camisa Vines | Front-Stack Engineer & Digital Builder</title>
+  <meta name="title" content="Camisa Vines | Front-Stack Engineer & Digital Builder">
   <meta name="description" content="Front-stack engineer helping people and small businesses create confident, modern digital presences with craftsmanship and care.">
   <meta name="keywords" content="web developer, react developer, frontend engineer, portfolio, web design">
-  <meta name="author" content="Cami Savines">
+  <meta name="author" content="Camisa Vines">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yourusername.github.io/portfolio/">
-  <meta property="og:title" content="Cami Savines | Front-Stack Engineer & Digital Builder">
+  <meta property="og:title" content="Camisa Vines | Front-Stack Engineer & Digital Builder">
   <meta property="og:description" content="Front-stack engineer helping people and small businesses create confident, modern digital presences with craftsmanship and care.">
   <meta property="og:image" content="https://yourusername.github.io/portfolio/og-image.jpg">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://yourusername.github.io/portfolio/">
-  <meta property="twitter:title" content="Cami Savines | Front-Stack Engineer & Digital Builder">
+  <meta property="twitter:title" content="Camisa Vines | Front-Stack Engineer & Digital Builder">
   <meta property="twitter:description" content="Front-stack engineer helping people and small businesses create confident, modern digital presences with craftsmanship and care.">
   <meta property="twitter:image" content="https://yourusername.github.io/portfolio/og-image.jpg">
   

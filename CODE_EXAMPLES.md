@@ -976,7 +976,7 @@ export const Hero = () => {
 // src/utils/constants.js
 
 export const SITE_CONFIG = {
-  name: 'Cami Savines',
+  name: 'Camisa Vines',
   title: 'Front-Stack Engineer & Digital Builder',
   description: 'Front-stack engineer helping people and small businesses create confident, modern digital presences with craftsmanship and care.',
   url: 'https://yourusername.github.io/portfolio',

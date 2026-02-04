@@ -691,7 +691,7 @@ When menu open:
 │                  [GitHub]  [LinkedIn]  [Twitter]                         │
 │                      (Social icons, 24px)                                │
 │                                                                           │
-│                      © 2026 Cami Savines                                 │
+│                      © 2026 Camisa Vines                                 │
 │                         (14px, slate)                                    │
 │                                                                           │
 │                                                                           │
