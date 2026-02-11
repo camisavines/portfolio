@@ -33,48 +33,40 @@ export const About = () => {
             </p> */}
           </motion.div>
 
-          {/* Two Column Layout */}
-          <div className="about__columns">
-            {/* Left Column: Bio & Skills */}
+          {/* Single Column Layout */}
+          <div className="about__single-column">
+            {/* Bio */}
+            <motion.div variants={staggerItem} className="about__bio">
+              <h3 className="heading-3">About Me</h3>
 
-            <motion.div variants={staggerItem} className="about__left">
-              {/* Bio */}
-              <div className="about__bio">
-                <h3 className="heading-3">about me</h3>
-
-                <p className="body-base">
-                  I believe the web should feel welcoming, not intimidating.
-                  Every project I take on is an opportunity to create something
-                  that makes people feel confident and capable.
-                </p>
-                <p className="body-base">
-                  With a background in full-stack development and a passion for
-                  user experience, I bring both technical expertise and a
-                  human-centered approach to every build. I don't just write
-                  code—I craft experiences that resonate.
-                </p>
-                <p className="body-base">
-                  When I'm not coding, you'll find me exploring new coffee
-                  shops, reading about design psychology, or contributing to
-                  open-source projects.
-                </p>
-              </div>
-
-              {/* Skills TODO: Fix this */}
+              <p className="body-base">
+                I believe the web should feel welcoming, not intimidating.
+                Every project I take on is an opportunity to create something
+                that makes people feel confident and capable.
+              </p>
+              <p className="body-base">
+                With a background in full-stack development and a passion for
+                user experience, I bring both technical expertise and a
+                human-centered approach to every build. I don't just write
+                code—I craft experiences that resonate.
+              </p>
+              <p className="body-base">
+                When I'm not coding, you'll find me exploring new coffee
+                shops, reading about design psychology, or contributing to
+                open-source projects.
+              </p>
             </motion.div>
 
-            {/* Right Column: Experience Timeline */}
-            <motion.div variants={staggerItem} className="about__right">
-              <div className="about__skills">
-                <h3 className="heading-3">Skills & Technologies</h3>
-                <div className="about__skills-list">
-                  <div className="about__skill-tags">
-                    {skills.map((skill, index) => (
-                      <span key={index} className="about__skill-tag">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+            {/* Skills */}
+            <motion.div variants={staggerItem} className="about__skills">
+              <h3 className="heading-3">Skills & Technologies</h3>
+              <div className="about__skills-list">
+                <div className="about__skill-tags">
+                  {skills.map((skill, index) => (
+                    <span key={index} className="about__skill-tag">
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -102,9 +94,17 @@ export const About = () => {
                     <span className="about__timeline-year">{job.dates}</span>
                     <h4 className="about__timeline-role">{job.title}</h4>
                     <p className="about__timeline-company">{job.company}</p>
-                    <p className="about__timeline-description">
-                      {job.description}
-                    </p>
+                    {Array.isArray(job.description) ? (
+                      <ul className="about__timeline-highlights">
+                        {job.description.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="about__timeline-description">
+                        {job.description}
+                      </p>
+                    )}
                     {job.assets && (
                       <p className="about__timeline-assets">
                         <strong>Technologies:</strong> {job.assets}

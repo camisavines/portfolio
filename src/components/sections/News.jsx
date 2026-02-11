@@ -54,7 +54,7 @@ export function News() {
               >
                 {item.image && (
                   <div className="news-card__image">
-                    <img src={item.image} alt={item.title} />
+                    <img src={item.image} alt={item.title} width={"100%"} />
                   </div>
                 )}
                 <h3 className="news-card__title">{item.title}</h3>

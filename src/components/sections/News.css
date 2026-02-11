@@ -57,6 +57,15 @@
   opacity: 1;
 }
 
+/* News Card Image */
+.news-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-3);
+}
+
 /* Type Badge */
 .news-card__type {
   display: inline-block;
@@ -164,6 +173,10 @@
 @media (max-width: 480px) {
   .news-card {
     padding: var(--space-4);
+  }
+
+  .news-card__image {
+    height: 180px;
   }
 
   .news-card__meta {

@@ -18,16 +18,10 @@
   margin-top: var(--space-4);
 }
 
-/* Two Column Layout */
-.about__columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-12);
-  align-items: start;
-}
-
-/* Left Column */
-.about__left {
+/* Single Column Layout */
+.about__single-column {
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-10);
@@ -36,6 +30,10 @@
 /* Bio */
 .about__bio {
   text-align: left;
+}
+
+.about__bio h3 {
+  margin-bottom: var(--space-4);
 }
 
 .about__bio p {
@@ -48,8 +46,11 @@
 }
 
 /* Skills */
-.about__skills h3 {
+.about__skills {
   text-align: left;
+}
+
+.about__skills h3 {
   margin-bottom: var(--space-6);
 }
 
@@ -57,6 +58,30 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
+}
+
+.about__skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.about__skill-tag {
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-sand);
+  color: var(--color-charcoal);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-clay);
+  transition: all var(--transition-base);
+}
+
+.about__skill-tag:hover {
+  background-color: var(--color-terracotta);
+  color: white;
+  border-color: var(--color-terracotta);
 }
 
 .about__skill-group {
@@ -97,15 +122,9 @@
   width: 100%;
 }
 
-/* Right Column */
-.about__right {
-  display: flex;
-  flex-direction: column;
-}
-
 /* Experience Timeline */
 .about__experience h3 {
-  text-align: left;
+  text-align: center;
   margin-bottom: var(--space-6);
 }
 
@@ -225,24 +244,60 @@
   font-weight: var(--weight-bold);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .about__columns {
-    grid-template-columns: 1fr;
-    gap: var(--space-10);
-  }
+.about__timeline-assets {
+  font-size: var(--text-sm);
+  color: var(--color-slate);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-clay);
 }
 
+/* Awards Section */
+.about__awards h3 {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.about__awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.about__award-card {
+  background-color: var(--color-sand);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-clay);
+  transition: all var(--transition-base);
+}
+
+.about__award-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-terracotta);
+}
+
+.about__award-name {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-2);
+}
+
+.about__award-description {
+  font-size: var(--text-sm);
+  color: var(--color-slate);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .about__header {
     margin-bottom: var(--space-8);
   }
 
-  .about__columns {
-    gap: var(--space-8);
-  }
-
-  .about__left {
+  .about__single-column {
     gap: var(--space-8);
   }
 
