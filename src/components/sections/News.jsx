@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import posts from '../../data/news.jsx';
 import './News.css';
 
 export function News() {
@@ -22,40 +23,6 @@ export function News() {
     }
   };
 
-  const newsItems = [
-    {
-      title: 'Building Modern Web Experiences',
-      publication: 'Tech Blog',
-      date: 'January 2026',
-      url: 'https://example.com/article-1',
-      description: 'A deep dive into creating user-centric digital experiences with modern web technologies.',
-      type: 'Article'
-    },
-    {
-      title: 'The Art of Digital Craftsmanship',
-      publication: 'Design Weekly',
-      date: 'December 2025',
-      url: 'https://example.com/article-2',
-      description: 'Exploring the intersection of design, development, and user experience.',
-      type: 'Feature'
-    },
-    {
-      title: 'Small Business Digital Transformation',
-      publication: 'Entrepreneur Magazine',
-      date: 'November 2025',
-      url: 'https://example.com/article-3',
-      description: 'How thoughtful digital presence can transform small businesses.',
-      type: 'Interview'
-    },
-    {
-      title: 'React Best Practices for 2026',
-      publication: 'Dev Community',
-      date: 'October 2025',
-      url: 'https://example.com/article-4',
-      description: 'Modern patterns and practices for building scalable React applications.',
-      type: 'Tutorial'
-    }
-  ];
 
   return (
     <section id="news" className="news section">
@@ -75,21 +42,24 @@ export function News() {
           </motion.div>
 
           <div className="news__grid">
-            {newsItems.map((item, index) => (
+            {posts.map((item, index) => (
               <motion.a
                 key={index}
-                href={item.url}
+                href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="news-card"
                 variants={itemVariants}
                 whileHover={{ y: -8 }}
               >
-                <div className="news-card__type">{item.type}</div>
+                {item.image && (
+                  <div className="news-card__image">
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                )}
                 <h3 className="news-card__title">{item.title}</h3>
                 <p className="news-card__description">{item.description}</p>
                 <div className="news-card__meta">
-                  <span className="news-card__publication">{item.publication}</span>
                   <span className="news-card__date">{item.date}</span>
                 </div>
                 <div className="news-card__arrow">

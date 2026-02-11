@@ -5,6 +5,7 @@ import {
   staggerContainer,
   staggerItem,
 } from "../../utils/animations";
+import { skills, work, awards } from "../../data/resume.jsx";
 import "./About.css";
 
 export const About = () => {
@@ -13,56 +14,6 @@ export const About = () => {
     threshold: 0.1,
   });
 
-  const skills = [
-    {
-      category: "Frontend",
-      items: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
-    },
-    {
-      category: "Backend",
-      items: ["Node.js", "Express", "PostgreSQL", "REST APIs"],
-    },
-    { category: "Tools", items: ["Git", "Figma", "Vite", "VS Code"] },
-  ];
-
-  const experience = [
-    {
-      year: "2024 - Present",
-      role: "Senior Frontend Developer",
-      company: "Tech Company",
-      description:
-        "Leading frontend development for enterprise applications, mentoring junior developers, and implementing design systems.",
-      highlights: [
-        "Built scalable React applications",
-        "Improved performance by 40%",
-        "Led team of 4 developers",
-      ],
-    },
-    {
-      year: "2022 - 2024",
-      role: "Full Stack Developer",
-      company: "Digital Agency",
-      description:
-        "Developed custom web solutions for clients, from concept to deployment.",
-      highlights: [
-        "Delivered 20+ client projects",
-        "Specialized in React & Node.js",
-        "Maintained 99.9% uptime",
-      ],
-    },
-    {
-      year: "2020 - 2022",
-      role: "Frontend Developer",
-      company: "Startup Inc",
-      description:
-        "Built responsive web applications and collaborated with design team.",
-      highlights: [
-        "Implemented responsive designs",
-        "Optimized load times",
-        "A/B tested features",
-      ],
-    },
-  ];
 
   return (
     <section id="about" className="about section">
@@ -117,29 +68,13 @@ export const About = () => {
               <div className="about__skills">
                 <h3 className="heading-3">Skills & Technologies</h3>
                 <div className="about__skills-list">
-                  <ul>
-                    {skills.map((skillGroup, index) => (
-                      <li>
-                        <strong>{skillGroup.category}</strong>:{" "}
-                        {skillGroup.items.join(", ")}
-                      </li>
+                  <div className="about__skill-tags">
+                    {skills.map((skill, index) => (
+                      <span key={index} className="about__skill-tag">
+                        {skill}
+                      </span>
                     ))}
-                  </ul>
-
-                  {/* {skills.map((skillGroup, index) => (
-                    <div key={skillGroup.category} className="about__skill-group">
-                      <p className="about__skill-category">
-                        <strong>{skillGroup.category}:</strong>
-                      </p>
-                      <ul className="about__skill-items">
-                        {skillGroup.items.map((skill) => (
-                          <li key={skill} className="about__skill-item">
-                            {skill}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))} */}
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -149,7 +84,7 @@ export const About = () => {
           <div className="about__experience" style={{marginTop: "8rem"}}>
             <h3 className="heading-3">Work Experience</h3>
             <div className="about__timeline">
-              {experience.map((job, index) => (
+              {work.map((job, index) => (
                 <motion.div
                   key={index}
                   className="about__timeline-item"
@@ -159,23 +94,42 @@ export const About = () => {
                 >
                   <div className="about__timeline-marker">
                     <div className="about__timeline-dot"></div>
-                    {index < experience.length - 1 && (
+                    {index < work.length - 1 && (
                       <div className="about__timeline-line"></div>
                     )}
                   </div>
                   <div className="about__timeline-content">
-                    <span className="about__timeline-year">{job.year}</span>
-                    <h4 className="about__timeline-role">{job.role}</h4>
+                    <span className="about__timeline-year">{job.dates}</span>
+                    <h4 className="about__timeline-role">{job.title}</h4>
                     <p className="about__timeline-company">{job.company}</p>
                     <p className="about__timeline-description">
                       {job.description}
                     </p>
-                    <ul className="about__timeline-highlights">
-                      {job.highlights.map((highlight, i) => (
-                        <li key={i}>{highlight}</li>
-                      ))}
-                    </ul>
+                    {job.assets && (
+                      <p className="about__timeline-assets">
+                        <strong>Technologies:</strong> {job.assets}
+                      </p>
+                    )}
                   </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Awards Section */}
+          <div className="about__awards" style={{marginTop: "6rem"}}>
+            <h3 className="heading-3">Awards & Recognition</h3>
+            <div className="about__awards-grid">
+              {awards.map((award, index) => (
+                <motion.div
+                  key={index}
+                  className="about__award-card"
+                  variants={staggerItem}
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <h4 className="about__award-name">{award.name}</h4>
+                  <p className="about__award-description">{award.description}</p>
                 </motion.div>
               ))}
             </div>
